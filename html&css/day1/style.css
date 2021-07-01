@@ -1,0 +1,14 @@
+#body{
+    color: green; 
+ }
+ .paragraph{
+     background-color: aqua;
+     font-size: 40px;
+ }
+ .font{
+     font-style: italic;
+     color: orange;
+     font-size: 41px;
+     font-weight: bolder;
+     margin-top: 75px;
+ }
