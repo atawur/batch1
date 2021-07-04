@@ -1,0 +1,92 @@
+body{
+ background-color: rebeccapurple;;
+ margin: 0;
+ padding: 0;
+}
+main{
+    background-color: #ccc;
+    width: 1000px;
+    min-height: 600px;
+    margin:0 auto;
+}
+header{
+    background-color: rosybrown;
+    height: 150px;
+    width: 100%;
+    background: url('../images/b2.jpg') no-repeat;
+    background-size: cover;
+    float: left;
+}
+.logo{
+    
+    height: 150px ;
+    width: 20%;
+    float: left;
+}
+.text{
+    color: white;
+}
+section{
+    background-color: violet;
+    width: 100%;
+    float: left;
+    min-height: 400px;
+}
+.sidebar{
+    background-color: turquoise;
+    float: left;
+    width: 20%;
+    min-height: 400px;
+}
+#content{
+    background-color:thistle;
+    float: left;
+    width: 80%;
+    min-height: 400px;
+}
+footer{
+    background-color: bisque;
+    float: left;
+   min-height: 200px;
+   width: 100%;
+}
+.border{
+    background-color: coral;
+    height: 200px;
+    width: 300px;
+    margin: 40px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: crimson;
+    border-radius: 30px;
+}
+.border-other{
+    background-color: coral;
+    height: 200px;
+    width: 300px;
+    margin: 40px;
+    border-top-style: solid;
+    border-bottom-style: double;
+    border-left-style: dotted;
+    border-top-width: 7px;
+    border-left-width: 1px;
+    border-top-color: darkmagenta;
+    border-bottom-color: darksalmon;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 20px;
+}
+.border-short{
+    background-color: coral;
+    height: 200px;
+    width: 300px;
+    margin: 40px;  
+    border: 5px green solid;
+}
+.border2{
+    background-color: coral;
+    height: 200px;
+    width: 300px;
+    margin: 40px;  
+    border-top:5px rebeccapurple dotted;
+    border-bottom:7px  goldenrod double;
+}
