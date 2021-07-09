@@ -1,0 +1,23 @@
+body{
+
+ margin: 0;
+ padding: 0;
+
+ background-attachment: fixed;
+ background: rebeccapurple url('../images/t.png') no-repeat top right ;
+}
+.main{
+    width: 80%;
+    height: 900px;
+    background-color:white;
+    margin: 0 auto;
+    padding: 5px;
+}
+table{
+    width: 100%;
+}
+table,tr,th,td{
+    border: 1px solid orange;
+    border-collapse: collapse;
+    padding: 10px;
+}

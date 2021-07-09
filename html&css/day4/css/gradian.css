@@ -1,0 +1,49 @@
+body{
+
+ margin: 0;
+ padding: 0;
+ background-color: khaki;
+}
+.main{
+    width: 80%;
+    height: 1600px;
+    background-color:khaki;
+    margin: 0 auto;
+    padding: 5px;
+}
+.linear{
+    height: 200px;
+    background-image: linear-gradient( red ,green);
+    width: 600px;
+}
+.linear_right{
+    height: 200px;
+    background-image: linear-gradient( to right, red ,green);
+    width: 600px;
+}
+.linear_right_bottom{
+    height: 200px;
+    background-image: linear-gradient( to  bottom right, red ,green);
+    width: 600px;
+}
+.linear_right_deg{
+    height: 200px;
+    background-image: linear-gradient( 70deg, red ,green);
+    width: 600px;
+}
+.multi_color{
+    height: 200px;
+    background-image: linear-gradient( to bottom right ,red 20% ,green 20%,blue 2%,pink,yellow);
+    width: 600px;
+}
+
+.tr{
+    height: 200px;
+    background-image: linear-gradient( to right,white,green 20%,blue 2%,pink,yellow);
+    width: 600px;
+}
+.repeat{
+    height: 200px;
+    background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+    width: 600px;
+}

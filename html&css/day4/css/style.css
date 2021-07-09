@@ -1,0 +1,80 @@
+body{
+
+ margin: 0;
+ padding: 0;
+}
+.main{
+    width: 80%;
+    height: 1600px;
+    background-color:white;
+    margin: 0 auto;
+    padding: 5px;
+}
+table{
+    width: 100%;
+}
+table,tr,th,td{
+    border: 1px solid orange;
+    border-collapse: collapse;
+    padding: 10px;
+}
+#outline{
+    background-color: aqua;
+    border: 1px solid red;
+    outline-style: double;
+    outline-color:green;
+    outline-width: 6px;
+    outline-offset: 15px;
+
+    outline: 6px double green 15px;
+
+
+}
+.font_section{
+    background-color: honeydew;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+    font-weight: bolder;
+    font-style: italic;
+}
+.static{
+    background-color: indianred;
+    height: 40px;
+    width: 400px;
+    position: static;
+    
+}
+
+.sticky{
+    background-color: indianred;
+    height: 40px;
+    width: 400px;
+    position: sticky;
+    top:0;
+    
+}
+.background{
+    background: url('../images/t.png') no-repeat;
+    background-attachment: fixed;
+    
+}
+.normal{
+    background-color: indianred;
+    height: 300px;
+    width: 600px;
+}
+
+.relative{
+    background-color: red;
+    height: 300px;
+    width: 600px;
+    position: relative;
+}
+.ab{
+    background-color: indigo;
+    height: 100px;
+    width: 100px;
+    position:absolute;
+    right: 0;
+    bottom: 0;
+}
