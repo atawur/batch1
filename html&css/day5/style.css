@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+    padding:0;
+    background-color: bisque;
+    min-height: 900px;
+ }
+ .div{
+     min-height: 300px;
+     width: 45%;
+     float: left;
+     margin: 10px;
+     background-color: cornsilk;
+ }
+ table{
+     width:100%
+ }
+ table,tr,td,th{
+     border: 2px solid green;
+     border-collapse: collapse;
+ }
+.text_right{
+    text-align: right;
+}
+.relative{
+    background-color: khaki;
+    min-height: 300px;
+    width: 100%;
+    position: relative;
+}
+.top{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-color: darkkhaki;
+    border:2px solid orange
+}
+.right{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-color: olive;
+    border:2px solid orange;
+    right:0;
+    top:0;
+}
+.bottom_left{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-color: olive;
+    border:2px solid orange;
+    left:0;
+    bottom:0;  
+}
+.bottom_right{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-color: white;
+    border:2px solid orange;
+    right:0;
+    bottom:0;  
+}
+.liner_gradian{
+    background: linear-gradient(to right,
+    red 20%, orange 20% 40%, yellow 40% 60%, green 60% 80%, blue 80%);  
+    min-height: 150px;
+}
+.liner_gradian2{
+    background: linear-gradient(to top, black, cyan);
+    min-height: 150px;
+}
+.overflow {
+    background-color: #eee;
+    width: 200px;
+    height: 100px;
+    border: 1px double orange;
+    overflow-x: scroll;
+    padding: 10px;
+  
+  }
+  .fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+  }
