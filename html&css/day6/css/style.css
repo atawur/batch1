@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+}
+.main_content{
+    background-color: aqua;
+    margin: 0 auto;
+    min-height: 800px;
+    width: 80%;
+}
+.radial_gradian{
+    height: 400px;
+    width: 50%;
+    background: radial-gradient(circle farthest-corner at 20% 30%,red 40%,green 10%);
+}
+table{
+    width: 100%;
+}

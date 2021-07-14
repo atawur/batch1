@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/style.css"/>
+    </head>
+    <body>
+        <div class="main_content">
+                <form action="submit.php" method="get" enctype="multipart/form-data">
+                    <table>
+                        <caption>Registration Form</caption>
+                        <tr>
+                            <td style="width: 35%;">Name</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <input autocomplete="off" type="text" required name="first_name" placeholder="Please enter your name" value=""/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;">Invoice</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <input type="text" disabled required name="first_name"  value="vvv"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;">Date of Birth</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <input type="date"  name="first_name" placeholder="Please enter your name" value=""/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;">Range</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <input type="range"  name="range" placeholder="Please enter your name" value=""/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;">Occupation</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <select name="occupation">
+                                    <option value="">Select Occupation</option>
+                                    <option value="engineer">Engineer</option>
+                                    <option value="doctor">Doctor</option>
+                                    <option value="student">Student</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;">Department</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <select name="occupation" multiple>
+                                    <option value="">Select Department</option>
+                                    <option value="engineer">Engineer</option>
+                                    <option value="doctor">Doctor</option>
+                                    <option value="student">Student</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;">Email</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <input type="email" name="first_name" placeholder="Please enter your DOB" value=""/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;">Age</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <input type="number" min="8" max="15" name="first_name" placeholder="Please enter your Age" value=""/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;">Hobby</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <input type="checkbox"  name="hobby" value="cricket"/> cricket<br>
+                                <input type="checkbox"  name="hobby" value="football"/> football<br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;">Gender</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <input type="radio" name="gender"  value="Male"/> Male <br>
+                                <input type="radio" name="gender"  value="female"/> Female Male <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;">Color</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <input type="color" name="color"  value="Male"/>  <br>
+                                <input type="hidden" name="id" value="1"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;">Profile picture</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <input type="file" name="profile_picture" />  <br>
+                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;">Short description</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <textarea name="shor_des">
+                                        this is short description
+                                </textarea>
+                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;">Password</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <input type="password" size="10" name="first_name" placeholder="Please enter your Password" value=""/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;">Week</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <input type="week" size="10" value=""/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;">Month</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <input type="month" size="10" value=""/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;">Telephone</td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{7}-[0-9]{6}" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 35%;"></td>
+                            <td style="width: 5%;"> :</td>
+                            <td style="width: 60%;">
+                                <input type="reset" name="reset">
+                                <input type="submit" name="first_name"  value="Save"/>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+        </div>
+
+    </body>
+</html>
