@@ -10,9 +10,11 @@ body{
 .scioal_section{
     
     width: 80%;
-    height: 30px;
-    padding: 10px 0px;
+    height: 42px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .icon_section{
     float: left;
@@ -61,7 +63,9 @@ P:first-child i{
     background:goldenrod;
     width: 100%;
     min-height: 60px;
-    padding: 19px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .nav_main{
     width: 80%;
@@ -95,6 +99,7 @@ P:first-child i{
     color: #222;
     text-transform: uppercase;
     font-size: 14px;
+    padding: 7px 0;
     text-align: center;
 }
 #nav ul  ul {
@@ -102,6 +107,7 @@ P:first-child i{
     left: 0;
     top:100%;
     visibility: hidden;
+    box-shadow: 2px 0px 1px 1px #ccc;
 }
 
 #nav ul ul ul{
@@ -111,3 +117,7 @@ P:first-child i{
 #nav li:hover > ul{
     visibility: visible;
 }
+#nav ul li a:hover{
+    background: #ff9902;
+    color: white;
+} 
