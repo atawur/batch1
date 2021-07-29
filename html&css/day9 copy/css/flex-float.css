@@ -1,0 +1,44 @@
+body{
+    padding: 0;
+    margin: 0;
+    
+}
+.main{
+    width: 80%;
+    margin: 0 auto;
+    background-color: antiquewhite;
+    min-height: 600px;
+    padding: 10px;
+}
+.layout1{
+    float: left;
+    width: 100%;
+    background-color: aqua;
+    
+   
+}
+.layout2{
+    float: left;
+    width: 50%;
+    background-color: gold;
+}
+
+.flex_box{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.flex_box > .layout4 {
+    flex-basis: 100%;
+    background-color: green;
+    border: 1px solid;
+    padding: 7px;
+}
+.flex_box > section {
+    flex-basis: 50%;
+    flex-grow: 1;
+    background-color: hotpink;
+}
+.border{
+    
+}
