@@ -4,7 +4,14 @@
 
        require_once("./header.php");
        require_once("functions.php");
+       $id = $_GET['id'];
        $allStatus = getAllStatus();
+     if($id){
+        $postInfo = getPostById(base64_decode($id));
+        if($postInfo){
+            extract($postInfo);
+        }
+     }
       ?>
 
       <?php 
@@ -47,29 +54,31 @@
             <div class="container">
                 <div class="content">
                     <form  action="post.php" method="post">
+                   <?php if($postInfo){?>     
                     <table>
                             <tr>
                                 <td>Title</td>
                                 <td>:</td>
-                                <td><input type="text" name="title"></td>
+                                <td><input type="text" name="title" value="<?php echo $title;?>"></td>
                             </tr>   
                             <tr>
                                 <td>Description</td>
                                 <td>:</td>
                                 <td>
-                                    <textarea name='description'></textarea>
+                                    <textarea name='description'><?php echo $description;?></textarea>
                                 </td>
                             </tr> 
                             <tr>
                                 <td>Status</td>
                                 <td>:</td>
                                 <td>
-                                <select name="status">
+                                    <select name="status">
                                       
-                                      <?php while($row = mysqli_fetch_assoc($allStatus ) ){?>
-                                          <option value="<?php echo $row['status_name'];?>"><?php echo $row['status_name'];?></option>
-                                      <?php } ?>    
-                      
+                                    <?php while($row = mysqli_fetch_assoc($allStatus ) ){?>
+                                        <option value="<?php echo $row['status_name'];?>" <?php  if($row['id'] == $status) {echo "selected";} ?> ><?php echo $row['status_name'];?></option>
+                                    <?php } ?>    
+                    
+                                    </select>
                                 </td>
                                 
                             </tr> 
@@ -77,11 +86,14 @@
                                 <td></td>
                                 <td></td>
                                 <td>
-                                    <input type="submit" name='submit' value="Save"/>
+                                    <input type="submit" name='submit' value="Update"/>
                                 </td>
                                 
                             </tr>    
                         </table>
+                        <?php }else{ ?>
+                        <h2 style='color:red !important;text-align:center'>No Data found</h2>
+                     <?php } ?>   
                     </form>   
                 </div>
                 <div class="sidebar">

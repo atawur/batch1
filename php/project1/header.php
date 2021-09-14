@@ -27,7 +27,7 @@
                                     <li><a href="index.php" >Home</a></li>
                                     <li><a href="post.php" >Create Post</a></li>
         
-                                    <li><a href="http://scholaritsolutions.com/">SITS</a></li>
+                                    <li><a href="all_post.php">All Post</a></li>
                                     <li>
                                         <a href="#">Category</a>
                                         <ul>
