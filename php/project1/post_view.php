@@ -1,4 +1,5 @@
 <?php
+session_start();
      require_once("functions.php");
      require_once("./header.php");
      $rs = getAllPost();
@@ -41,6 +42,7 @@
 
             <div class="container">
                 <div class="content">
+              
             <?php if($postInfo){?>
                     <table id='customers'>
                             <tr>

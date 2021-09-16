@@ -4,10 +4,10 @@
 
        require_once("./header.php");
        require_once("functions.php");
-       $id = $_GET['id'];
+       $encode_id = $_GET['id'];
        $allStatus = getAllStatus();
-     if($id){
-        $postInfo = getPostById(base64_decode($id));
+     if($encode_id){
+        $postInfo = getPostById(base64_decode($encode_id));
         if($postInfo){
             extract($postInfo);
         }
@@ -53,8 +53,8 @@
 
             <div class="container">
                 <div class="content">
-                    <form  action="post.php" method="post">
-                   <?php if($postInfo){?>     
+                    <form  action="post_update.php?id=<?php echo $encode_id;?> " method="post">
+                   <?php if($postInfo){?>   
                     <table>
                             <tr>
                                 <td>Title</td>
@@ -75,7 +75,7 @@
                                     <select name="status">
                                       
                                     <?php while($row = mysqli_fetch_assoc($allStatus ) ){?>
-                                        <option value="<?php echo $row['status_name'];?>" <?php  if($row['id'] == $status) {echo "selected";} ?> ><?php echo $row['status_name'];?></option>
+                                        <option value="<?php echo $row['id'];?>" <?php  if($row['id'] == $status) {echo "selected";} ?> ><?php echo $row['status_name'];?></option>
                                     <?php } ?>    
                     
                                     </select>

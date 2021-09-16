@@ -1,10 +1,11 @@
 <?php
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
-     require_once("functions.php");
-     require_once("./header.php");
-     $rs = getAllPost();
+// ini_set('display_errors', '1');
+// ini_set('display_startup_errors', '1');
+// error_reporting(E_ALL);
+session_start();
+require_once("functions.php");
+require_once("./header.php");
+$rs = getAllPost();
 ?>
 <style>
 #customers {
@@ -34,6 +35,16 @@ error_reporting(E_ALL);
 
             <div class="container">
                 <div class="content">
+            <?php if(isset($_SESSION['message'])){?>
+                <div style="color:green;text-align:center;font-size:14px;margin-bottom:10px">
+
+                        <?php 
+    
+                            echo $_SESSION['message'];
+                            unset($_SESSION['message'])
+                        ?>
+                </div>
+             <?php } ?>   
                 <?php if(!empty($rs)){?>
                     <table id='customers'>
                             <tr>

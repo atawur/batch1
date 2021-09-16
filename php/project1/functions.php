@@ -30,4 +30,17 @@ function savePost($post){
   }
 
 
+  function update_post($data,$id){
+    extract($data);
+    global $conn;
+    $sql = "UPDATE post SET title= \"$title\",description= \"$description\" , status='$status' WHERE id=$id";
+
+    //echo $sql;
+    //exit();
+
+    $result = mysqli_query($conn,$sql);
+    return $result;
+  }
+
+
 ?>
