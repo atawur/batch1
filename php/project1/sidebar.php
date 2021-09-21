@@ -4,7 +4,7 @@
                     </div>
                     <div class="profile_section">
                        <div class="image_section">
-                            <img src="./images/user1.jpg"/>
+                            <img src="./images/c5.jpg"/>
                         </div>
                         
                         <div class="description">

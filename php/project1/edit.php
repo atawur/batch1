@@ -5,7 +5,8 @@
        require_once("./header.php");
        require_once("functions.php");
        $encode_id = $_GET['id'];
-       $allStatus = getAllStatus();
+       //$allStatus = getAllStatus();
+       $allStatus = getMasterData('status');
      if($encode_id){
         $postInfo = getPostById(base64_decode($encode_id));
         if($postInfo){

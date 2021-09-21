@@ -4,7 +4,8 @@
 
        require_once("./header.php");
        require_once("functions.php");
-       $allStatus = getAllStatus();
+       //$allStatus = getAllStatus();
+       $allStatus = getMasterData('status');
       ?>
 
       <?php 
