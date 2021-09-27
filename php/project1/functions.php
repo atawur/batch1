@@ -60,8 +60,12 @@ function saveUser($userInfo){
   //$full_name = $userInfo['full_name'];
 
   extract($userInfo);
+
   global $conn;
   $md5Password =  md5($password);
+  $full_name = getData($full_name);
+  
+
   $sql = "INSERT INTO user(full_name,email,password,gender) values ('$full_name','$email','$md5Password','$gender')";
   $rs = mysqli_query($conn,$sql);
   $user_id  = mysqli_insert_id($conn);
@@ -86,6 +90,17 @@ function saveUser($userInfo){
         return true;
       }
        return false;
+
+  }
+
+  function getData($data){
+    global $conn;
+    $trim_data = trim($data);
+    $stripslashes = stripslashes($trim_data);
+    $htmlspecial = htmlspecialchars($stripslashes);
+    $final_data = mysqli_real_escape_string($conn,$htmlspecial);
+
+    return $final_data;
 
   }
 ?>
