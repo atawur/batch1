@@ -1,4 +1,12 @@
 <?php
+
+    if(session_status()== PHP_SESSION_NONE){
+        session_start();
+    }
+  
+?>
+<?php
+
 include_once('db/db.php');
 function savePost($post){
       global $conn;
@@ -99,8 +107,33 @@ function saveUser($userInfo){
     $stripslashes = stripslashes($trim_data);
     $htmlspecial = htmlspecialchars($stripslashes);
     $final_data = mysqli_real_escape_string($conn,$htmlspecial);
-
     return $final_data;
+  }
 
+  function login($email,$password){
+    $md5_password = md5($password);
+    global $conn;
+    $sql = "SELECT * FROM `user` WHERE   email = '$email' AND password='$md5_password'";
+    $rs = mysqli_query($conn,$sql);
+    $user = mysqli_fetch_assoc($rs );
+    if($user){
+      $_SESSION['userinfo'] = $user ;
+      $_SESSION['sucess_message'] = "Sucessfully login" ;
+      header("Location:dashboard.php");
+    }else{
+      $_SESSION['login_error_message'] = "Invalid user name or password" ; 
+    }
+  }
+
+  function redirect_login(){
+    if(!isset($_SESSION['userinfo'])){
+      header("Location:login.php");
+    }
+  }
+
+  function redirect_dashboard(){
+    if(isset($_SESSION['userinfo'])){
+      header("Location:dashboard.php");
+    }
   }
 ?>

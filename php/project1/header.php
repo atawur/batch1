@@ -1,3 +1,10 @@
+<?php
+
+    if(session_status()== PHP_SESSION_NONE){
+        session_start();
+    }
+  
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -30,7 +37,7 @@
                                     <li><a href="post.php" >Create Post</a></li>
         
                                     <li><a href="all_post.php">All Post</a></li>
-                                    <li>
+                                    <!-- <li>
                                         <a href="#">Category</a>
                                         <ul>
                                             <li><a href="#">Electronics</a>
@@ -42,8 +49,14 @@
                                             </li>
                                             <li><a href="#">Kitchen</a></li>
                                         </ul>
-                                    </li>
-                                    <li><a href="signup.php" class="signup" target="_blank">Signup</a></li>
+                                    </li> -->
+                                    <?php if(isset($_SESSION['userinfo'])) {?>
+                                        <li><a href="logout.php" class="logout" target="_blank">Logout</a></li>
+                                        
+                                    <?php }else{ ?>
+                                        <li><a href="signup.php" class="signup" target="_blank">Signup</a></li>
+                                        <li><a href="login.php" class="signup" target="_blank">Login</a></li>   
+                                    <?php } ?>    
                                 </ul>
                         </nav>
                     </div>

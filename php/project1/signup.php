@@ -4,6 +4,7 @@
 
 require_once("./header.php");
 include_once('./functions.php');
+redirect_dashboard();
 //$hobby = getAllHobbies();
 $hobbies = getMasterData('hobby');
 
